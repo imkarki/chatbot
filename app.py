@@ -66,7 +66,7 @@ def get_chunks(text):
 #converting chunks into vectors 
 def get_vector(text_chunks):
     #in langchain different embedding  and in openai also different embedding 
-    embeddings=GoogleGenerativeAIEmbeddings(model='models/embedding-004',google_api_key='AIzaSyB60aNNU6uMIFGvnNAlzTOCrqR_pO6Q5SU')
+    embeddings=GoogleGenerativeAIEmbeddings(model='models/embedding-004',google_api_key='GOOGLE_API_KEY')
     
     #takes all the texture and embed according to this embedding that i have initialize
     vector_store=FAISS.from_texts(text_chunks,embedding=embeddings)
@@ -97,11 +97,11 @@ Answer:"""
 
 
 def user_input(user_question):
-    # google_api_key='AIzaSyB60aNNU6uMIFGvnNAlzTOCrqR_pO6Q5SU'
+   
 
     #local faiss_index from local 
     #pdf is already converted into vectors so already store in the faiss index
-    embeddings=GoogleGenerativeAIEmbeddings(model='models/embedding-004',google_api_key='AIzaSyB60aNNU6uMIFGvnNAlzTOCrqR_pO6Q5SU')
+    embeddings=GoogleGenerativeAIEmbeddings(model='models/embedding-004',google_api_key='GOOGLE_API_KEY')
 
     new_db=FAISS.load_local('faiss_index',embeddings)
 
