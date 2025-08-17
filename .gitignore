@@ -1,0 +1,20 @@
+#python cache
+__pycache__/
+
+#Environment / virtual env
+.env
+.venv/
+venv
+
+#ML / Vectorstore /embeddings
+faiss_index/
+*.pkl
+*.joblib
+
+
+#PDF uploads (optional if you don't want large files in repo)
+uploads/
+
+#OS files
+.DS_Store
+Thumbs.db
